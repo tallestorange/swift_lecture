@@ -18,3 +18,43 @@
  
  ※for文を使います
  */
+
+/*:
+ ---
+ 問3. 以下の定数ageに対して処理分けをしましょう.
+ - ageが20以上の際に"adult"と表示する
+ - それ以外の場合は何もしない
+ */
+
+import Cocoa
+let age = arc4random_uniform(100)
+
+/*:
+---
+問4. Carクラスに対してメソッドを追加しましょう.
+- nameプロパティをprintするvoid型メソッド
+*/
+class Car {
+    let name:String
+    init(name:String) {
+        self.name = name
+    }
+}
+
+/*:
+ ---
+ 問5. 問3のCarクラスを継承してCrownクラスを定義しましょう.
+ 
+ ※CrownプロパティにhorsePowerプロパティ(Double型)があります
+ */
+
+/*:
+ ---
+ 問6. Rectプロトコルに適合させたRectangle**構造体**を定義しましょう.
+ */
+
+protocol Rect {
+    var width:Double{set get}
+    var height:Double{set get}
+    func calcArea() -> Double
+}
