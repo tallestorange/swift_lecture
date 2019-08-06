@@ -80,6 +80,53 @@ let dict2:[String:Int] = ["a": 1, "b": 2, "c": 3] // 型を明示することも
 
 ---
 
+## if文
+
+条件式に括弧をつける必要がなくなった
+
+```swift
+let name = "tanaka"
+if name == "tanaka" {
+  print("tnk")
+}
+if (name == "tanaka") { // 括弧をつけてもよい
+  print("(tnk)")
+}
+```
+
+---
+
+## for文(1)
+
+for-in文を使う
+
+```swift
+let numbers = [3, 5, 7]
+for number in numbers { // 3, 5, 7
+    print(number)
+}
+```
+
+---
+
+## for文(2)
+
+```swift
+for number in 0...5 { // 0 ~ 5
+    print(number)
+}
+for number in 0..<5 { // 0 ~ 4
+    print(number)
+}
+```
+```obj-c
+for (int i=0;i<5;i++) { // Swiftでこの書き方は出来ない
+    print(i)
+}
+```
+
+---
+
 ## クラス定義
 
 ```Swift
