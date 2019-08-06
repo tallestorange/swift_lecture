@@ -45,7 +45,7 @@ class Car {
  ---
  問5. 問3のCarクラスを継承してCrownクラスを定義しましょう.
  
- ※CrownプロパティにhorsePowerプロパティ(Double型)があります
+ ※CrownにはhorsePowerプロパティ(Double型)があります. 追加しましょう.
  */
 
 /*:
