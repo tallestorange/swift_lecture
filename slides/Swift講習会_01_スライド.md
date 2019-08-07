@@ -210,6 +210,28 @@ class Hello {
 
 ---
 
+## クラスの継承
+
+class クラス名:継承したいクラス {}
+
+```Swift
+class Man {
+    let height:Double
+    init(height:Double) { // イニシャライザ
+        self.height = height
+    }
+}
+class SuperMan:Man {
+    func say() {
+        print("superman")
+    }
+}
+let ins = SuperMan(height:1.93)
+print(ins.height)
+```
+
+---
+
 ## イニシャライザ
 
 **インスタンスを生成する際**に呼び出されるメソッド
