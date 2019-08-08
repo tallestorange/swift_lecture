@@ -30,7 +30,41 @@ man2.height = 1.52
 
 /*:
  ---
- 問3. Optional型の文字列(String)が与えられるので、Unwrapしてprintしてみましょう.もしnilであった場合は,"nil"と表示してみましょう.
+ 問3. 以下に示す挙動の違いがどうして起きるのか説明してください.
+ */
+
+protocol Car {
+    var name:String {set get}
+}
+
+class CarClass:Car {
+    var name:String
+    init(name:String) {
+        self.name = name
+    }
+}
+
+struct CarStruct:Car {
+    var name:String
+    init(name:String) {
+        self.name = name
+    }
+}
+
+func changeName(car:Car) {
+    var car = car // hint: 引数はlet扱いなので別の変数に移動させています
+    car.name = "toyota"
+}
+
+let car1 = CarStruct(name: "nissan")
+let car2 = CarClass(name: "nissan")
+changeName(car: car1)
+changeName(car: car2)
+print(car1.name, car2.name) // "nissan" "toyota" <- なぜ???
+
+/*:
+ ---
+ 問4. Optional型の文字列(String)が与えられるので、Unwrapしてprintしてみましょう.もしnilであった場合は,"nil"と表示してみましょう.
  */
 
 let mojis = [
