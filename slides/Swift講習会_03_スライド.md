@@ -136,7 +136,8 @@ func throwError(name:String) throws -> String {
 
 ## do-catch文
 
-throwsキーワードが使われたメソッドを呼び出すにはtryキーワードが必要
+- エラーが起きうる処理はdo節に書く
+- エラーが起きたらcatch節に移る
 
 ```swift
 func throwError(name:String) throws -> String {
