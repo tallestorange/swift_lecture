@@ -88,3 +88,25 @@ print(tuple.0) // 0番目の要素にアクセス(100)
 
 let profile:(name:String, age:Int) = (name:"tanaka", age:25)
 print(profile.name)
+
+class Hoge {
+    private func sayHello() {
+        print("hello")
+    }
+    func hello() {
+        self.sayHello()
+    }
+}
+
+let ins = Hoge()
+ins.hello() // "hello"
+
+class Test {
+    static let name = "tanaka"
+    static func sayHello() {
+        print("hello!")
+    }
+}
+
+print(Test.name)
+Test.sayHello()
