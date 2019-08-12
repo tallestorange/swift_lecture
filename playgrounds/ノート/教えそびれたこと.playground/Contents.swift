@@ -73,11 +73,18 @@ case .saturday:
 }
 
 enum BloodType:Int {
-    case ab = 0
+    case ab = 0 // 他のケースは自動的に連番が振られる
     case a
     case b
     case o
 }
 
 let bloodType:BloodType = .b
-print(bloodType.rawValue)
+print(bloodType.rawValue) // 2
+
+var tuple:(Int, String) // タプルを定義
+tuple = (100, "hoge")
+print(tuple.0) // 0番目の要素にアクセス(100)
+
+let profile:(name:String, age:Int) = (name:"tanaka", age:25)
+print(profile.name)
