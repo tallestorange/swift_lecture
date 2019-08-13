@@ -1,3 +1,9 @@
+/*:
+# 教えそびれたこと
+ ## 列挙型
+ ### 定義のやりかた
+*/
+
 enum Weekday {
     case sunday
     case monday
@@ -48,11 +54,19 @@ enum Weekday {
     }
 }
 
+/*:
+ ### インスタンスの生成
+ */
+
 let day1 = Weekday.sunday
 let day2:Weekday = .wednesday // 型がわかっている場合は省略可能
 let day3 = Weekday(japaneseName: "月")! // イニシャライザを使用した初期化
 
 print(day2.name)
+
+/*:
+ ### Switch文での分岐処理
+ */
 
 switch day2 {
 // switch文で分岐処理を行う場合は網羅性チェックをしてくれる
@@ -72,6 +86,10 @@ case .saturday:
     print("土")
 }
 
+/*:
+ ### RawValue
+ */
+
 enum BloodType:Int {
     case ab = 0 // 他のケースは自動的に連番が振られる
     case a
@@ -82,12 +100,20 @@ enum BloodType:Int {
 let bloodType:BloodType = .b
 print(bloodType.rawValue) // 2
 
+/*:
+ ## タプル
+ */
+
 var tuple:(Int, String) // タプルを定義
 tuple = (100, "hoge")
 print(tuple.0) // 0番目の要素にアクセス(100)
 
 let profile:(name:String, age:Int) = (name:"tanaka", age:25)
 print(profile.name)
+
+/*:
+ ## アクセス修飾子
+ */
 
 class Hoge {
     private func sayHello() {
