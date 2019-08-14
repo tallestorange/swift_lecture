@@ -26,7 +26,7 @@ class Man {
 let man1 = Man(height: 1.93)
 let man2 = man1
 man2.height = 1.52
-//print(man1.height, man2.height) // 答えになってしまうのでコメントアウト
+print(man1.height, man2.height) // 答えになってしまうのでコメントアウト
 
 /*:
  ---
