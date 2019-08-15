@@ -12,6 +12,11 @@
     - if-let文
  - nilであった場合にデフォルト値をもたせたい場合
     - Nil Coalescing Operator(??文)
+ 
+ unwrapしない方法もあります
+ 
+ - unwrapしたくないが、中のメソッドやプロパティは使いたい
+    - Optional Chaining
 */
 
 let mojis = [
@@ -80,3 +85,6 @@ if let moji6 = moji {
     print(moji6) // moji6はString型
 }
 
+/*:
+ - Optional Chaining
+ */
