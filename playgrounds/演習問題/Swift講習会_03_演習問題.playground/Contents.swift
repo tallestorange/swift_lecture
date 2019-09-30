@@ -39,3 +39,15 @@ func causeError() throws -> String {
     throw SomeError(name: "unlucky") // 50%でErrorになる
 }
 
+do {
+    let name = try causeError()
+    print(name)
+}
+catch {
+}
+
+if let name = try? causeError() {
+    print(name)
+}
+
+print(try! causeError())
